@@ -7,8 +7,6 @@ exports.Switch = undefined;
 
 var _ramda = require('ramda');
 
-var _maybe = require('./maybe.js');
-
 var Switch = exports.Switch = function Switch(options) {
 	this.options = (0, _ramda.fromPairs)(options);
 };

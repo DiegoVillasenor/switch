@@ -1,6 +1,4 @@
-import {curry, fromPairs} from 'ramda';
-import {Maybe} from './maybe.js';
-
+import {fromPairs} from 'ramda';
 
 export var Switch = function(options) {
 	this.options = fromPairs(options);
@@ -17,3 +15,4 @@ Switch.prototype.isFunction = function(state) {
 Switch.prototype.run = function(state) {
 	return this.isFunction(state) ? this.options[state]() : null;
 }
+
