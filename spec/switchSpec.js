@@ -2,7 +2,7 @@ import {Switch} from '../build/switch.js';
 
 describe("Switch", function() {
   beforeEach(function() {});
-  
+
   it("runs a different function depending of the state of the switcher", function() {
     var search_switch = 'sku'
     var filterBySku = () => 'filtrado';
@@ -16,7 +16,7 @@ describe("Switch", function() {
     expect(searchSwitch.run(search_switch)).toBe('filtrado por nombre');
   });
 
-  it("returns a value without excecuting it, if it is not a function ", function() {
+  it("returns a value without excecuting it, if it is not a function but is registered in the array", function() {
     var filterBySku = () => 'filtrado';
     var searchSwitch = Switch.of([['sku', filterBySku], ['name', 'filtered by name']]);
     var search_switch = 'name';
